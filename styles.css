@@ -7,104 +7,66 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #1a1a2e; /* Fundo escuro */
-    color: #f8d7ff; /* Texto com tom claro e suave */
+    color: #f8d7ff; /* Texto claro */
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start; /* Ajuste para alinhar ao topo */
+    height: auto;
+    padding: 20px;
 }
 
 .container {
     width: 90%;
-    max-width: 800px;
-    text-align: center;
+    max-width: 800px; /* Limite de largura */
+    margin: auto; /* Centraliza o container */
+    overflow: auto; /* Ajuda com corte */
+    background-color: #282c34; /* Fundo do container */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra sutil */
 }
 
 header {
     margin-bottom: 30px;
+    text-align: center; /* Centraliza o texto do cabeçalho */
 }
 
 h1 {
     font-size: 2.5em;
-    color: #d291bc; /* Rosa suave, com leve toque dark */
-    animation: fadeIn 2s ease-in;
-    text-shadow: 2px 2px 5px #000;
+    color: #d291bc; /* Cor do título */
+    text-shadow: 2px 2px 5px #000; /* Sombra do texto */
 }
 
 h2 {
     font-size: 2em;
-    margin-bottom: 10px;
-    color: #d4a5ff; /* Lilás claro para títulos */
+    margin: 20px 0 10px; /* Espaçamento */
+    color: #d4a5ff; /* Cor dos subtítulos */
+    text-align: center; /* Centraliza os subtítulos */
 }
 
-.timeline {
-    margin: 20px 0;
+.timeline, .gallery, .playlist {
+    margin: 20px 0; /* Margem vertical */
 }
 
 .line {
     height: 2px;
-    background-color: #6a0572; /* Linha com tom roxo profundo */
-    width: 50%;
-    margin: 0 auto;
+    background-color: #d291bc; /* Cor da linha */
+    margin: 10px 0; /* Margem */
 }
 
 ul {
-    list-style: none;
-    padding: 20px;
+    list-style-type: none; /* Remove marcadores da lista */
 }
 
 li {
-    margin: 20px 0;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-    animation-delay: 1s;
+    margin: 20px 0; /* Margem entre itens */
 }
 
 .content {
-    background-color: #2f2f4f; /* Fundo escuro para o texto */
-    padding: 15px;
-    border-radius: 10px;
-    border: 2px solid #d4a5ff; /* Contorno lilás suave */
-    color: #f8d7ff; /* Texto claro */
-}
-
-.gallery {
-    margin: 20px 0;
-}
-
-.photos img {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    margin: 10px;
-    border: 2px solid #d291bc; /* Contorno rosa suave */
-    transition: transform 0.3s ease, filter 0.3s ease;
-    filter: brightness(0.8); /* Deixa as imagens um pouco mais escuras */
-}
-
-.photos img:hover {
-    transform: scale(1.2);
-    filter: brightness(1); /* Clareia quando passar o mouse */
-}
-
-footer {
-    margin-top: 40px;
-}
-
-footer p {
-    font-size: 1.5em;
-    color: #d291bc;
-}
-
-footer span {
-    font-weight: bold;
-    color: #ff79c6; /* Destaque pink suave */
-}
-
-/* Animações */
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(-20px); }
-    100% { opacity: 1; transform: translateY(0); }
+    background-color: #353b48; /* Fundo dos itens */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
 }
 
 .video-button {
@@ -112,13 +74,37 @@ footer span {
     background-color: #d291bc; /* Cor de fundo */
     color: #fff; /* Cor do texto */
     padding: 10px 20px; /* Espaçamento interno */
-    text-decoration: none; /* Remove o sublinhado */
+    text-decoration: none; /* Remove sublinhado */
     border-radius: 5px; /* Bordas arredondadas */
     font-size: 1.2em; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
     transition: background-color 0.3s, transform 0.3s; /* Animação suave */
+    margin: 20px auto; /* Margem superior/inferior e centraliza */
 }
 
 .video-button:hover {
     background-color: #ec407a; /* Cor de fundo ao passar o mouse */
-    transform: scale(1.05); /* Leve aumento de tamanho ao passar o mouse */
+    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+}
+
+.gallery {
+    text-align: center; /* Centraliza a galeria */
+}
+
+.photos {
+    display: flex;
+    justify-content: center; /* Centraliza as imagens */
+    flex-wrap: wrap; /* Permite que as imagens quebrem em linhas */
+    gap: 10px; /* Espaçamento entre as imagens */
+}
+
+.photos img {
+    max-width: 100%; /* Faz as imagens se ajustarem ao container */
+    border-radius: 8px; /* Bordas arredondadas nas imagens */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil nas imagens */
+}
+
+footer {
+    margin-top: 40px; /* Margem acima do rodapé */
+    text-align: center; /* Centraliza o texto do rodapé */
 }
